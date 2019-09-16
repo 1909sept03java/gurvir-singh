@@ -1,11 +1,13 @@
 package com.revature.dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.revature.beans.Department;
 import com.revature.util.ConnectionUtil;
 
@@ -24,6 +26,8 @@ public class DepartmentDAOImpl implements DepartmentDAO {
 				d1.add(new Department(departmentID, departmentName));
 			}
 		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch(IOException e) {
 			e.printStackTrace();
 		}
 		
