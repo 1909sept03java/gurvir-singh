@@ -183,12 +183,26 @@ public class Driver {
 				        		while(wrong == -1) {
 					        		try {
 					        			acc = Integer.parseInt(acct);
-					        			wrong = 0;
 					        		} catch(NumberFormatException e) {
 					        			System.out.println("Not a valid account number. Try again. ");
 					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
 					        			acct = scan.nextLine();
 					        		}
+					        		
+					        		boolean rightAcc = false;
+					        		for (Account c : d.getAccountsByID(b.getId())) {
+					        			if(c.getAccountNum() == acc) 
+											rightAcc = true;	
+					        		}
+					        		
+					        		if(rightAcc)
+					        			wrong = 0;
+					        		else {
+					        			System.out.println("That account number doesn't exist. Try again");
+					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
+					        			acct = scan.nextLine();
+					        		}
+					        		
 				        		}
 				        		
 				        		System.out.println("How much money would you like to deposit?");
@@ -215,6 +229,20 @@ public class Driver {
 					        			wrong = 0;
 					        		} catch(NumberFormatException e) {
 					        			System.out.println("Not a valid account number. Try again. ");
+					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
+					        			acct = scan.nextLine();
+					        		}
+					        		
+					        		boolean rightAcc = false;
+					        		for (Account c : d.getAccountsByID(b.getId())) {
+					        			if(c.getAccountNum() == acc) 
+											rightAcc = true;	
+					        		}
+					        		
+					        		if(rightAcc)
+					        			wrong = 0;
+					        		else {
+					        			System.out.println("That account number doesn't exist. Try again");
 					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
 					        			acct = scan.nextLine();
 					        		}
@@ -322,7 +350,35 @@ public class Driver {
 					        		}
 					        		
 					        		System.out.println("Enter the id of the user you would like to update");
-					        		int updateId = Integer.parseInt(scan.nextLine());
+					        		String upId = scan.nextLine();
+					        		int updateId = 0;
+					        		int wrong = -1;
+					        		while(wrong == -1) {
+						        		try {
+						        			updateId = Integer.parseInt(upId);;
+						        			wrong = 0;
+						        		} catch(NumberFormatException e) {
+						        			System.out.println("Not a valid id number. Try again. ");
+						        			System.out.println("Enter the id of the user you would like to update");
+						        			upId = scan.nextLine();
+						        		}
+						        		
+						        		boolean rightId = false;
+						        		for (User c : d.getUsers()) {
+						        			if(c.getId() == updateId) 
+												rightId = true;	
+						        		}
+						        		
+						        		if(rightId)
+						        			wrong = 0;
+						        		else {
+						        			System.out.println("That id number doesnt exist. Try again");
+						        			System.out.println("Enter the id of the user you would like to update");
+						        			upId = scan.nextLine();
+						        		}
+						        		
+					        		}
+					        		
 					        		System.out.println("Enter new username for the user");
 					        		String userName = scan.nextLine();
 					        		System.out.println("Enter new password for the user");
@@ -347,11 +403,38 @@ public class Driver {
 					        		
 					        		System.out.println("Enter the id of the user you would like to delete");
 					        		String delUser = scan.nextLine();
-					        		int delId = Integer.parseInt(delUser);
+					        		int delId = 0;
+					        		int wrong = -1;
+					        		while(wrong == -1) {
+						        		try {
+						        			delId = Integer.parseInt(delUser);
+						        			wrong = 0;
+						        		} catch(NumberFormatException e) {
+						        			System.out.println("Not a valid id number. Try again. ");
+						        			System.out.println("Enter the id of the user you would like to update");
+						        			delUser = scan.nextLine();
+						        		}
+						        		
+						        		boolean rightId = false;
+						        		for (User c : d.getUsers()) {
+						        			if(c.getId() == delId) 
+												rightId = true;	
+						        		}
+						        		
+						        		if(rightId)
+						        			wrong = 0;
+						        		else {
+						        			System.out.println("That id number doesnt exist. Try again");
+						        			System.out.println("Enter the id of the user you would like to update");
+						        			delUser = scan.nextLine();
+						        		}
+						        		
+					        		}
+					        		
 					        		AccountDAO z = new AccountDAOImpl();
 					        		if (!(z.getAccountsByID(delId).isEmpty())) {
 						        		for(Account x : z.getAccountsByID(delId)) {
-						        			int wrong = -1;
+						        			wrong = -1;
 						        			double canDel = x.getBalance();
 								        	while (wrong == -1) {
 									        	try {
