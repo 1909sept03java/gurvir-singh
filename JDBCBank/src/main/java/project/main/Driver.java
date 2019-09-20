@@ -177,7 +177,20 @@ public class Driver {
 				        			System.out.println("Account: " + c.getAccountNum() + " Balance: " + c.getBalance());
 				        		}
 				        		
-				        		int acc = Integer.parseInt(scan.nextLine());
+				        		String acct = scan.nextLine();
+				        		int acc = 0;
+				        		wrong = -1;
+				        		while(wrong == -1) {
+					        		try {
+					        			acc = Integer.parseInt(acct);
+					        			wrong = 0;
+					        		} catch(NumberFormatException e) {
+					        			System.out.println("Not a valid account number. Try again. ");
+					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
+					        			acct = scan.nextLine();
+					        		}
+				        		}
+				        		
 				        		System.out.println("How much money would you like to deposit?");
 				        		String money = scan.nextLine();
 				        		double deposit = Double.parseDouble(money);
@@ -193,8 +206,20 @@ public class Driver {
 				        			System.out.println("Account: " + c.getAccountNum() + " Balance: " + c.getBalance());
 				        		}
 				        		
+				        		String acct = scan.nextLine();
+				        		int acc = 0;
+				        		wrong = -1;
+				        		while(wrong == -1) {
+					        		try {
+					        			acc = Integer.parseInt(acct);
+					        			wrong = 0;
+					        		} catch(NumberFormatException e) {
+					        			System.out.println("Not a valid account number. Try again. ");
+					        			System.out.println("Which account would you like to make a deposit in? Enter the account number");
+					        			acct = scan.nextLine();
+					        		}
+				        		}
 				        		
-				        		int acc = Integer.parseInt(scan.nextLine());
 				        		System.out.println("How much money would you like to withdraw?");
 				        		String money = scan.nextLine();
 				        		double withdraw = Double.parseDouble(money);
