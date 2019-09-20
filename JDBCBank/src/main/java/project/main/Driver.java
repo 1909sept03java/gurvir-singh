@@ -18,9 +18,11 @@ public class Driver {
 		Scanner scan = new Scanner(System.in);
 		while(home != 3) {
 			System.out.println("Welcome to JDBC Bank!");
-			System.out.println("Enter 0 if you want to login to your account. Enter 1 if you are a new user and you want to register ");
-			System.out.println("for a new account. Enter 2 if you are a superuser trying to access your other priviledges. Enter 3 if ");
-			System.out.println("you want to exit the application");
+			System.out.println("Enter one of the following values: ");
+			System.out.println("0: If you want to login to your account.");
+			System.out.println("1: If you are a new user and you want to register.");
+			System.out.println("2: If you are a superuser trying to access your other priviledges.");
+			System.out.println("3: To exit the application.");
 	        String input;
 	        input = scan.nextLine();
 	        if(!(input.equals("0") || input.equals("1") || input.equals("2") || input.equals("3"))) {
@@ -97,10 +99,13 @@ public class Driver {
 		        	System.out.println("You have successfuly logged in.");
 		        	int logged = -1;
 		        	while(logged != 5) {
-			        	System.out.println("Enter 0 if you want to view all your existing accounts and their balances. Enter 1 ");
-			        	System.out.println("if you want to create a new Account. Enter 2 if you want to delete an account with a balance of zero.");
-			        	System.out.println("Enter 3 if you want to make a deposit. Enter 4 if you want to make a withdrawal. Enter 5 if ");
-			        	System.out.println("you want to logout of your account.");
+			        	System.out.println("Enter one of the following values: ");
+			        	System.out.println("0: To view all existing accounts.");
+			        	System.out.println("1: To create a new account.");
+			        	System.out.println("2: To delete an account.");
+			        	System.out.println("3: To make a deposit.");
+			        	System.out.println("4: To make a withdrawal.");
+			        	System.out.println("5: To logout.");
 			        	String input2 = scan.nextLine();
 			        	if(!(input2.equals("0") || input2.equals("1") || input2.equals("2") || input2.equals("3") || input2.equals("4") || input2.equals("5"))) {
 			        		System.out.println("Invalid entry. You must enter one of the numbers you were prompted to enter.");
@@ -234,9 +239,12 @@ public class Driver {
 		        		scan.nextLine();
 		        		int back = -1;
 		        		while (back != 4) {
-			        		System.out.println("Enter 0 if you would like to view all users. Enter 1 if you would like to ");
-			        		System.out.println("create a user. Enter 2 if you would like to update a users inforamation.");
-			        		System.out.println("Enter 3 if you would like to delete a user. Enter 4 to go back to the main page.");
+		        			System.out.println("Enter one of the following values: ");
+		        			System.out.println("0: To view all existing users.");
+		        			System.out.println("1: To create a user");
+		        			System.out.println("2: To update a users information");
+		        			System.out.println("3: To delete a user");
+		        			System.out.println("4: To logout of your superuser account");
 			        		String sup = scan.nextLine();
 			        		if(!(sup.equals("0") || sup.equals("1") || sup.equals("2") || sup.equals("3") || sup.equals("4"))) {
 				        		System.out.println("Invalid entry. You must enter one of the numbers you were prompted to enter.");
