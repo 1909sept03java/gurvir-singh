@@ -33,23 +33,23 @@ function createEle(ele) {
         let myRow = createEle('tr'); 
         addToEle(myTable, myRow);
         for(let i = 0; i < users.length; i++) { 
-        let myDiv2 = createEle('td'); 
+        let myTab = createEle('td'); 
         let img = createEle('img');
         let p = createEle('p');
         img.src = users[i].picture.thumbnail; 
         p.innerHTML = `Name: ${users[i].name.first} ${users[i].name.last} Age: ${users[i].dob.age}`; 
-        
+
         if( i % 4 !== 0) {
-            addToEle(myDiv2, img);
-            addToEle(myDiv2, p);
-            addToEle(myRow, myDiv2);
+            addToEle(myTab, img);
+            addToEle(myTab, p);
+            addToEle(myRow, myTab);
 
         } else {
             myRow = createEle.apply('tr');
             addToEle(myTable, myRow);
-            addToEle(myDiv2, img);
-            addToEle(myDiv2, p);
-            addToEle(myRow, myDiv2);
+            addToEle(myTab, img);
+            addToEle(myTab, p);
+            addToEle(myRow, myTab);
 
         }
         //console.log(rUser.dob.age);

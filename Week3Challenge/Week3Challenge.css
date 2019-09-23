@@ -8,6 +8,11 @@ body {
     color: white;
 }
 
+th {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #fetchUsers {
     border: 2px solid black;
     color: Black;
