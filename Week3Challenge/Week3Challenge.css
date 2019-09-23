@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background-image: linear-gradient(to bottom, #575154, #524c51, 
+        #4d474f, #46424d, #3e3e4b, #353a47, #2c3642, #23323d,
+        #1a2c34, #13262b, #0e2022, #081a19);
+}
+#container {
+    color: white;
+}
+
+#fetchUsers {
+    border: 2px solid black;
+    color: Black;
+    background-color: Indigo;
+    padding: 10px 14px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; 
+}
+
+#fetchUsers:hover {
+    background-color: Black;
+    color: Indigo;}
