@@ -8,6 +8,7 @@ let ul = document.getElementById('randomUser');
 let myDiv = document.getElementById('container');
 let myTable = document.getElementById('myTable');
 let age = 0;
+let numUser = 0;
 
 function createEle(ele) {
     return document.createElement(ele); 
@@ -30,7 +31,8 @@ function createEle(ele) {
         let users = data.results; 
         //console.log(users);
         let uLength = users.length;
-        let myRow = createEle('tr'); 
+        let myRow = createEle('tr');
+        numUser = numUser + uLength; 
         addToEle(myTable, myRow);
         for(let i = 0; i < users.length; i++) { 
         let myTab = createEle('td'); 
@@ -57,7 +59,7 @@ function createEle(ele) {
         //console.log(age);
       }
         //console.log(uLength);
-        let avg = age / uLength;
+        let avg = age / numUser;
         let p2 = createEle('p');
         p2.innerHTML = `Average Age of Users: ${avg}`;
         addToEle(myDiv, p2);
