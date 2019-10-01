@@ -29,4 +29,13 @@
 		<servlet-name>LogoutServlet</servlet-name>
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>SessionServlet</servlet-name>
+		<servlet-class>com.revature.servlets.SessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionServlet</servlet-name>
+		<url-pattern>/Session</url-pattern>
+	</servlet-mapping>	
 </web-app>
