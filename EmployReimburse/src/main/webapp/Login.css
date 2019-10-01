@@ -1,0 +1,43 @@
+body {
+    background-color: #ababab !important;
+}
+
+header {
+    background:black;
+    color:white;
+    text-align: center;
+    font-family: Impact, fantasy;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: FreeMono, monospace;
+}
+
+.container {
+    text-align: center;
+    background-image: url(https://www.journeymexico.com/paper-you-can-write-on?showimg_aldggj=paper+you+can+write+on.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 500px;
+    width: 100%;
+}
+
+#myButton {
+    border: 2px solid black;
+    color: Black;
+    background-color: darkgray;
+    padding: 8px 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: 100px;
+}
+
+#myButton:hover {
+    background-color: Black;
+    color: white;}
+

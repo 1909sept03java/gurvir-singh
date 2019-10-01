@@ -1,0 +1,58 @@
+ #header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: black;
+    font-family: Impact, fantasy;
+    font-size: 20px;
+  }
+header {
+    text-align: center;
+    font-size: 30px;
+    
+  }
+#logout {
+    position: absolute;
+    right: 0;
+    border-color: 1px white;
+    background: black;
+    color: white;
+  }
+nav {
+    background: black;
+    border-bottom: solid #4190B5;
+}
+nav button {   
+    font-family: Impact, fantasy;
+    font-size: 18px;
+    border: solid black;
+    background-color: black;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; 
+    margin-right: 0;
+}
+nav button:hover {
+    color: grey;
+    border-bottom: solid grey;
+}
+section {
+    -webkit-box-shadow: 10px 10px 56px 14px rgba(45,108,189,1);
+    -moz-box-shadow: 10px 10px 56px 14px rgba(45,108,189,1);
+    box-shadow: 10px 10px 56px 14px rgba(45,108,189,1);    
+}
+#info {
+    background: black;
+    color:white;
+    text-align: center;
+}
+body {
+    background: black !important;
+}
+section {
+    text-align:center;
+    border-bottom: solid #4190B5;
+    color: #4190B5;
+    font-size: 20px;
+}
