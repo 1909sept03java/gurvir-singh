@@ -38,4 +38,29 @@
 		<servlet-name>SessionServlet</servlet-name>
 		<url-pattern>/Session</url-pattern>
 	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>UpdateInfoServlet</servlet-name>
+		<servlet-class>com.revature.servlets.UpdateInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateInfoServlet</servlet-name>
+		<url-pattern>/updateInfo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReimbursementServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ReimbursementServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReimbursementServlet</servlet-name>
+		<url-pattern>/view</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReimburseSessionServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ReimburseSessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReimburseSessionServlet</servlet-name>
+		<url-pattern>/Rsession</url-pattern>
+	</servlet-mapping>
 </web-app>

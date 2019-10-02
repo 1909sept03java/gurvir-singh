@@ -20,8 +20,8 @@
         </div>
     </div>
     <nav> 
-        <button onclick="EmployeeHome.html">Home</button>
-        <button onclick="View.html">View</button>
+        <button onclick="location.href='/EmployReimburse/profile'">Home</button>
+        <button onclick="location.href='/EmployReimburse/view'">View</button>
         <button onclick="Request.html">Request</button>
         <button onclick="Reimbursements">Reimbursements</button>
         <button onclick="Management">Management</button>
@@ -35,6 +35,24 @@
             <h4>Email:</h4>
             <p id = "email"></p>
         </div>
+        <div id="myForms">
+                <h4>Update Employee Information:</h4>
+                <form action="updateInfo" method="POST">
+                    <br>
+                    <label for="email">New Email:</label>
+                    <br>
+                    <input type="text" placeholder="email" name="email" class="eInfo" autocomplete="off"/>
+                    <br>
+                    <label for="password">New Password:</label>
+                    <br>
+                    <input type="password" name="password" class="eInfo" autocomplete="off"/>
+                    <br>
+                    <br>
+                    <input type="submit" value="updateInfo" id="upInfo"/>
+                    <br>
+                    <br>
+                </form>
+            </div>
 </body>
 <script src="scripts/Employee.js"></script>
 </html>

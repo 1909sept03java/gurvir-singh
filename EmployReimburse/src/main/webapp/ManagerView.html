@@ -13,11 +13,15 @@
         <header> 
             Dunder Mifflan Inc.
         </header>
-        <button id="logout">Logout</button>
+        <div id="logout">
+            <form action="logout" method="get">
+            <input type="submit" value="logout"/>
+        </form>
+        </div>
     </div>
     <nav> 
-        <button onclick="EmployeeHome.html">Home</button>
-        <button onclick="View.html">View</button>
+        <button onclick="location.href='/EmployReimburse/profile'">Home</button>
+        <button onclick="location.href='/EmployReimburse/view'">View</button>
         <button onclick="Request.html">Request</button>
         <button onclick="Reimbursements">Reimbursements</button>
         <button onclick="Management">Management</button>
@@ -25,15 +29,27 @@
     <section>
         View All Reimbursements
     </section>
-    <div id="resolved">
-        <table>
-
+    <div>
+        <h4>Resolved:</h4>
+        <table id="resolved">
+            <tr>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Details</th>
+            </tr>
         </table>
-    </div>
-    <div id="pending">
-        <table>
-    
+    </div> 
+    <br>
+    <div>
+        <h4>Pending:</h4>
+        <table id="pending">
+            <tr>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Details</th>
+            </tr>
         </table>
-    </div>
+     </div>
 </body>
+<script src="scripts/Reimbursement.js"></script>
 </html>

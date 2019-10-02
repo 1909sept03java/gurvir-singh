@@ -1,4 +1,4 @@
- #header {
+#header {
     display: flex;
     justify-content: center;
     position: relative;
@@ -49,10 +49,40 @@ section {
 }
 body {
     background: black !important;
+    color: white;
 }
 section {
     text-align:center;
     border-bottom: solid #4190B5;
     color: #4190B5;
     font-size: 20px;
+}
+#myForms {
+    background-color:#4190B5;
+    align-content:center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 50%;
+    color: white;
+
+}
+.eInfo {
+    width: 40%;
+    border: 1px solid black;
+}
+#upInfo {
+    border: 1px solid grey;
+    background: black;
+    color:white;
+}
+h4 {
+    text-align:center;
+    color: white;
+}
+table {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
 }
