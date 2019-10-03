@@ -103,5 +103,21 @@
 		<servlet-name>MyEmployeeServlet</servlet-name>
 		<url-pattern>/myEmployees</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>CheckRequestServlet</servlet-name>
+		<servlet-class>com.revature.servlets.CheckRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckRequestServlet</servlet-name>
+		<url-pattern>/resolve</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ResolveServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ResolveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResolveServlet</servlet-name>
+		<url-pattern>/myResolve</url-pattern>
+	</servlet-mapping>
 </web-app>
 
