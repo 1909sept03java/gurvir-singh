@@ -13,14 +13,18 @@
         <header> 
             Dunder Mifflan Inc.
         </header>
-        <button id="logout">Logout</button>
+        <div id="logout">
+            <form action="logout" method="get">
+            <input type="submit" value="logout"/>
+            </form>
+        </div>
     </div>
     <nav> 
         <button onclick="location.href='/EmployReimburse/profile'">Home</button>
         <button onclick="location.href='/EmployReimburse/view'">View</button>
-        <button onclick="Request.html">Request</button>
+        <button onclick="location.href='/EmployReimburse/request'">Request</button>
         <button onclick="Reimbursements">Reimbursements</button>
-        <button onclick="Management">Management</button>
+        <button onclick="location.href='/EmployReimburse/management'">Management</button>
     </nav>
     <section>
        Reimbursement Information

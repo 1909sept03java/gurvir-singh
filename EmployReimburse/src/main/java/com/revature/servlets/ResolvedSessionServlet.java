@@ -1,29 +1,33 @@
 package com.revature.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.beans.Reimbursement;
-import com.revature.dao.ReimbursementDAOImpl;
+import com.revature.beans.ResolvedRequests;
+import com.revature.service.ResolvedService;
 
-public class ReimburseSessionServlet extends HttpServlet {
+public class ResolvedSessionServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession(false);
 		try {
-			ReimbursementDAOImpl rd = new ReimbursementDAOImpl();
-			List<Reimbursement> allreimburse = rd.getReimbursementsByEmployId(Integer.parseInt(session.getAttribute("employeeId").toString()));
-			resp.getWriter().write((new ObjectMapper()).writeValueAsString(allreimburse));
+			
+			ResolvedService rs = new ResolvedService();
+			List<ResolvedRequests> allResolved = new ArrayList<ResolvedRequests>();
+			for(ResolvedRequests rr : rs.getAllResolved()) {
+				allResolved.add(rr);
+			}
+			
+			resp.getWriter().write((new ObjectMapper()).writeValueAsString(allResolved));
 			
 		} catch (Exception e) {
 			e.printStackTrace();

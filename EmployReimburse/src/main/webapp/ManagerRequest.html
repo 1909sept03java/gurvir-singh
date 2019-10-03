@@ -13,23 +13,39 @@
         <header> 
             Dunder Mifflan Inc.
         </header>
-        <button id="logout">Logout</button>
+        <div id="logout">
+            <form action="logout" method="get">
+            <input type="submit" value="logout"/>
+            </form>
+        </div>
     </div>
     <nav> 
-        <button onclick="EmployeeHome.html">Home</button>
-        <button onclick="View.html">View</button>
-        <button onclick="Request.html">Request</button>
+        <button onclick="location.href='/EmployReimburse/profile'">Home</button>
+        <button onclick="location.href='/EmployReimburse/view'">View</button>
+        <button onclick="location.href='/EmployReimburse/request'">Request</button>
         <button onclick="Reimbursements">Reimbursements</button>
-        <button onclick="Management">Management</button>
+        <button onclick="location.href='/EmployReimburse/management'">Management</button>
     </nav>
     <section>
         Sumbit Requests for Reimbursement
     </section>
-    <div id="request">
-        <form>
-
-        </form>
-    </div>
+   <div id="myForms">
+		<h4>Request Reimbursement Form: </h4>
+		<form action="request" method="POST">
+            <br>
+            <label for="amount">Amount you want reimbursed: </label>
+            <br>
+            <input type="text" name="amount" class="eInfo" autocomplete="off"/>
+            <br>
+            <label for="detail">What was the money spent on: </label>
+            <br>
+			<input type="text" name="detail" class="eInfo" autocomplete="off"/>
+            <br>
+            <br>
+            <input type="submit" value="request" id="upInfo"/>
+            <br>
+            <br>
+		</form>
 </body>
 </html>
 

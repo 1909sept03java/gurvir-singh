@@ -117,7 +117,7 @@ public class ReimbursementDAOImpl implements ReimbursementDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setDouble(1, amount);
 			ps.setInt(2, employId);
-			ps.setString(2, detail);
+			ps.setString(3, detail);
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {

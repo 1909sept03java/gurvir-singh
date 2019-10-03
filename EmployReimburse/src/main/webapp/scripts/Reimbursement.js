@@ -23,11 +23,9 @@ function populateTable() {
 		return response.json(); 
 	}).then(function(data) {
         allData = data;
-        console.log(allData);
         for(let i = 0; i < allData.length; i++) {
             if(allData[i].status == 0) {
                 pending.push(allData[i]);
-                console.log(pending);
             } else if(allData[i].status == 1) {
                 approved.push(allData[i]);
             } else

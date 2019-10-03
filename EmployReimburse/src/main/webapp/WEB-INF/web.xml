@@ -63,4 +63,45 @@
 		<servlet-name>ReimburseSessionServlet</servlet-name>
 		<url-pattern>/Rsession</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>SubmitReimbursementServlet</servlet-name>
+		<servlet-class>com.revature.servlets.SubmitReimbursementServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitReimbursementServlet</servlet-name>
+		<url-pattern>/request</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ManagementInfoServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ManagementInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManagementInfoServlet</servlet-name>
+		<url-pattern>/management</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ResolvedSessionServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ResolvedSessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResolvedSessionServlet</servlet-name>
+		<url-pattern>/resolvedSession</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmployeeManagerSessionServlet</servlet-name>
+		<servlet-class>com.revature.servlets.EmployeeManagerSessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeManagerSessionServlet</servlet-name>
+		<url-pattern>/empManSession</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>MyEmployeeServlet</servlet-name>
+		<servlet-class>com.revature.servlets.MyEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyEmployeeServlet</servlet-name>
+		<url-pattern>/myEmployees</url-pattern>
+	</servlet-mapping>
 </web-app>
+

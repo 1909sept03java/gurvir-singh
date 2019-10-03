@@ -13,22 +13,63 @@
         <header> 
             Dunder Mifflan Inc.
         </header>
-        <button id="logout">Logout</button>
+        <div id="logout">
+            <form action="logout" method="get">
+            <input type="submit" value="logout"/>
+            </form>
+        </div>
     </div>
     <nav> 
         <button onclick="location.href='/EmployReimburse/profile'">Home</button>
         <button onclick="location.href='/EmployReimburse/view'">View</button>
-        <button onclick="Request.html">Request</button>
+        <button onclick="location.href='/EmployReimburse/request'">Request</button>
         <button onclick="Reimbursements">Reimbursements</button>
-        <button onclick="Management">Management</button>
+        <button onclick="location.href='/EmployReimburse/management'">Management</button>
     </nav>
     <section>
        Manager Information
     </section>
-    <div id="manager">
-        <table>
-
+    <div>
+        <h4>All Resolved Reimbursements:</h4>
+        <table id="resolved">
+            <tr>
+            <th>Employee</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Details</th>
+            <th>Resolved By:</th>
+            </tr>
+        </table>
+    </div> 
+    <br>
+       <div>
+        <h4>All Resolved Reimbursements:</h4>
+        <table id="employees">
+            <tr>
+            <th>Employee</th>
+            <th>Manager</th>
+            </tr>
         </table>
     </div>
+    <br>
+    <br>
+    <div id="myForms">
+		<h4>View Requests by Single Employee Managed by You:</h4>
+            <label for="employeeId">Employee Id:</label>
+            <br>
+			<input type="text" name="employeeId" class="eInfo" autocomplete="off" id="myId"/>
+            <br>
+            <br>
+            <button id="retrieve">Retrieve</button>
+            <br>
+            <br>
+	</div>
+	<div id="myEmployees">
+		<table id="replaceT">
+		</table>
+	</div>
+	<br>
+	<br>
 </body>
+<script src="scripts/Requests.js"></script>
 </html>
