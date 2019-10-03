@@ -1,4 +1,4 @@
-package com.revature.tests;
+package com.revature.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
