@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.revature.dao.ReimbursementDAO;
 import com.revature.dao.ReimbursementDAOImpl;
 
-public class SubmitReimbursementServlet extends HttpServlet {
+public class ManagerRequestServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,7 +19,7 @@ public class SubmitReimbursementServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
 		if (session != null) {
-				req.getRequestDispatcher("Requests.html").forward(req, resp);
+				req.getRequestDispatcher("ManagerRequest.html").forward(req, resp);
 			
 		} else {
 			resp.sendRedirect("login");
@@ -37,7 +37,6 @@ public class SubmitReimbursementServlet extends HttpServlet {
 		String detail = req.getParameter("detail");
 		if(req.getParameter("amount") != null && req.getParameter("detail") != null) {
 			ReimbursementDAO rd = new ReimbursementDAOImpl();
-			System.out.println("This happens!!");
 			rd.createReimbursements(amount, id, detail);
 		
 		}

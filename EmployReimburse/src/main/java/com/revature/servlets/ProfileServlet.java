@@ -15,7 +15,7 @@ public class ProfileServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
 		if (session != null) {
-			if (session.getAttribute("employeeId").equals(1) || session.getAttribute("employeeId").equals(2)) {
+			if (Integer.parseInt(session.getAttribute("employeeId").toString()) == 1 || Integer.parseInt(session.getAttribute("employeeId").toString()) == 2) {
 				req.getRequestDispatcher("ManagerHome.html").forward(req, resp);
 				
 			} else {

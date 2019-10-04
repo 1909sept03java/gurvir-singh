@@ -99,6 +99,7 @@ function addEmployee() {
         
 	    let tabl = createEle('table');
 	    tabl.setAttribute('id', 'replaceT');
+	    tabl.setAttribute('class', 'table table-striped table-dark')
 	    let firstR = createEle('tr');
 	    let th1 = createEle('th')
 	    let th2 = createEle('th')

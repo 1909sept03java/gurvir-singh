@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class ReimbursementServlet extends HttpServlet {
+public class ManagerViewServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -17,8 +17,7 @@ public class ReimbursementServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
 		if (session != null) {
-				req.getRequestDispatcher("View.html").forward(req, resp);
-		
+				req.getRequestDispatcher("ManagerView.html").forward(req, resp);
 				
 		} else {
 			resp.sendRedirect("login");
@@ -28,5 +27,3 @@ public class ReimbursementServlet extends HttpServlet {
 	}
 		
 }
-
-

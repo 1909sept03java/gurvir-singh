@@ -119,5 +119,21 @@
 		<servlet-name>ResolveServlet</servlet-name>
 		<url-pattern>/myResolve</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>ManagerViewServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ManagerViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManagerViewServlet</servlet-name>
+		<url-pattern>/view2</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ManagerRequestServlet</servlet-name>
+		<servlet-class>com.revature.servlets.ManagerRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManagerRequestServlet</servlet-name>
+		<url-pattern>/request2</url-pattern>
+	</servlet-mapping>
 </web-app>
 
