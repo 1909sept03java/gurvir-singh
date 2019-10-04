@@ -37,7 +37,6 @@ public class SubmitReimbursementServlet extends HttpServlet {
 		String detail = req.getParameter("detail");
 		if(req.getParameter("amount") != null && req.getParameter("detail") != null) {
 			ReimbursementDAO rd = new ReimbursementDAOImpl();
-			System.out.println("This happens!!");
 			rd.createReimbursements(amount, id, detail);
 		
 		}
